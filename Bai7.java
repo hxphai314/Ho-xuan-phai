@@ -1,15 +1,16 @@
-package BaiTapChuongI;
-import java.lang.String;
-import java.util.Scanner;
+package BaiTapMau;
 public class Bai7 {
-	public static<T> int find(T[] a, T target)
-	{
-		for (int i = 0; i < a.length; i++)
-			if (target.equals(a[i]))
-				return i;
-
-		return -1;
+	public static void main(String[] args) {
+		int[] A = {5,7,2,4,8};
+		for(int i=0;i<A.length;i++)
+			for(int j=i+1;i<A.length;j++)
+			if (A[i] > A[j])
+			{
+				int t =A[i];
+				A[i]=A[j];
+				A[j]=t;
+			}
+		for (int i=0;i<A.length;i++)
+			System.out.println(A[i] +"");
 	}
 }
-	
-
