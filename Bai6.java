@@ -1,10 +1,17 @@
-package BaiTapChuongI;
-import java.lang.Math;
+package BaiTapMau;
+import java.util.Scanner;
 public class Bai6 {
-	public static void main (String args[]) {
-    double sum = 0;
-    for (int i=1;i<100;i++)
-    	{sum += Math.sqrt(i);}
-	System.out.println(sum);
+	static void main (String[] args){
+		int N;
+		int i;
+		Scanner keyboard= new Scanner(System.in);
+		System.out.print("N =");
+		N =keyboard.nextInt();
+		for (i=2;i<N;i++)
+			if(N%i==0) break;
+		if (i<Math.round(Math.sqrt(N)))
+			System.out.print("N khong phai la so nguyen to");
+		else 
+			System.out.print("N phai la so nguyen to");			
 	}
 }
